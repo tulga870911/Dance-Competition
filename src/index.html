@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>Wait and Eat</title>
+  <!--Bootstrap latest compiled and minified CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!--Optional theme-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!--Custom CSS-->
+  <link rel="stylesheet" href="content/css/app.css"/>
+</head>
+<body>
+
+  <!--Navigation bar directive that stays at the top of every page-->
+  <gz-navbar current-user="currentUser"></gz-navbar>
+
+  <!--Main content that changes based on route-->
+  <div ng-view class="container"></div>
+
+  <!--Third-party JS-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.4.4/angular-route.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+
+  <!--main app module-->
+  <script src="app/app.module.js"></script>
+
+  <!--auth module-->
+  <script src="app/auth/auth.module.js"></script>
+  <script src="app/auth/config.route.js"></script>
+  <script src="app/auth/auth.controller.js"></script>
+  <script src="app/auth/authForm.directive.js"></script>
+  <script src="app/auth/auth.service.js"></script>
+
+  <!--layout module-->
+  <script src="app/layout/layout.module.js"></script>
+  <script src="app/layout/navbar.directive.js"></script>
+
+  <!--waitlist module-->
+  <script src="app/waitlist/waitlist.module.js"></script>
+  <script src="app/waitlist/config.route.js"></script>
+  <script src="app/waitlist/waitlist.controller.js"></script>
+  <script src="app/waitlist/directives/partyForm.directive.js"></script>
+  <script src="app/waitlist/directives/partyTable.directive.js"></script>
+
+  <!--landing module-->
+  <script src="app/landing/landing.module.js"></script>
+  <script src="app/landing/config.route.js"></script>
+
+  <!--core module-->
+  <script src="app/core/core.module.js"></script>
+  <script src="app/core/constants.js"></script>
+  <script src="app/core/firebaseData.service.js"></script>
+  <script src="app/core/party.service.js"></script>
+  <script src="app/core/textMessage.service.js"></script>
+
+</body>
+</html>
