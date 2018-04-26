@@ -1,0 +1,147 @@
+<div class = "container showResult_table">
+    <div class = "row" style = "font-size:25px;margin-bottom:30px">
+        <div class = "col-md-5" style = "padding-left:40px">
+            {{$root.dancetype_title}}
+        </div>
+        <div class = "col-md-5">
+            {{$root.marking_title}}
+        </div>        
+    </div>
+    <div class = "row">
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[0]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[0]}}</span>
+                <span class = "mark">{{$root.judge_mark[0]}}</span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[1]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[1]}}</span>
+                <span class = "mark">{{$root.judge_mark[1]}}</span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[2]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[2]}}</span>
+                <span class = "mark">{{$root.judge_mark[2]}}</span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[3]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[3]}}</span>
+                <span class = "mark">{{$root.judge_mark[3]}}</span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[4]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[4]}}</span>
+                <span class = "mark">{{$root.judge_mark[4]}}</span>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[5]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[5]}}</span>
+                <span class = "mark">{{$root.judge_mark[5]}}</span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[6]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[6]}}</span>
+                <span class = "mark">{{$root.judge_mark[6]}}</span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[7]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[7]}}</span>
+                <span class = "mark">{{$root.judge_mark[7]}}</span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[8]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[8]}}</span>
+                <span class = "mark">{{$root.judge_mark[8]}}</span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[9]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[9]}}</span>
+                <span class = "mark">{{$root.judge_mark[9]}}</span>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[10]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[10]}}</span>
+                <span class = "mark">{{$root.judge_mark[10]}}</span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[11]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[11]}}</span>
+                <span class = "mark">{{$root.judge_mark[11]}}</span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[12]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[12]}}</span>
+                <span class = "mark">{{$root.judge_mark[12]}}</span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[13]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[13]}}</span>
+                <span class = "mark">{{$root.judge_mark[13]}}</span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <div class = "judge_marking">
+                <img src = "{{$root.judge_photo[14]}}" class = "img-circle" style = "height:80px;">
+                <span>{{$root.judge_name[14]}}</span>
+                <span class = "mark">{{$root.judge_mark[14]}}</span>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-2">
+        </div>
+        <div class = "col-md-6">
+            <span>The type of selection
+                <label class = "radio-inline" style = "margin-left:40px">
+                    <input type = "radio" ng-model = "vm.select_type" value = "dancer">Dancer
+                </label>
+                <label class = "radio-inline">
+                    <input type = "radio" ng-model = "vm.select_type" value = "dancetype">DanceType
+                </label>
+            </span>
+        </div>
+        <div class = "col-md-2">
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-5 col-xs-5 col-sm-5">
+            <button type="submit" style = "position:absolute; right:20px; width:100px;margin-left:300px" class="btn btn-block btn-primary" ng-click="vm.next_prevBtn(false)" ng-disabled="vm.lock_form">Prev</button>
+        </div>
+        <div class = "col-md-5 col-xs-5 col-sm-5" style = "position:relative">
+            <button type="submit" style = "position:absolute; left:20px; width:100px;margin-right:300px" class="btn btn-block btn-primary" ng-click="vm.next_prevBtn(true)" ng-disabled="vm.lock_form">Next</button>
+        </div>
+        <div class = "col-md-2">
+        </div>
+    </div>
+</div>

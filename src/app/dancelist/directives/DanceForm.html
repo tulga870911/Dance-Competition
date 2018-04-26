@@ -1,0 +1,96 @@
+<form method="post" name="myForm" ng-submit = "vm.addDance()">
+    <div class="panel panel-headerless">
+        <div class="panel-body">
+            <div class="member-form-inputs">
+                <div class="member-form-add-header">
+                    <div class = "row">
+                        <h3>{{vm.title}}</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="control-label" for="icon">Name</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="name" id="name" ng-model="vm.newDance.name" ng-required="true" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="control-label" for="icon">Date</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" name="date" id="date" ng-model="vm.newDance.date" ng-required="true" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span style="color:red" ng-show="myForm.date.$dirty && myForm.date.$invalid">
+                            <span ng-show="myForm.date.$error.required">Datetime is required.</span>
+                        </span>
+                    </div>
+
+                    <div class = "row" ng-hide="vm.lock_form">
+                        <div class="col-sm-3">
+                            <label class="control-label" for="icon">Status</label>
+                        </div>
+                        <div class="col-sm-9"> 
+                            <label class="radio-inline">
+                              <input type="radio" ng-model = "vm.newDance.state" value = "Upcoming"  name="optradio" ng-checked='true' >Upcoming
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" ng-model = "vm.newDance.state" value = "Live" name="optradio">Live
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" ng-model = "vm.newDance.state" value = "Closed" name="optradio">Closed
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="control-label" for="icon">Judges</label>
+                        </div>
+                        <div class="col-sm-9">                      
+                            <select class="form-control" ng-show="vm.showJudgeSelect" id='multi-select-judge' multiple='multiple' name="my-select[]" ng-model="vm.newDance.judges" ng-options="x.email as x.name for x in vm.all_judges">
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label class="control-label" for="icon">Dance Types</label>
+                        </div>
+                        <div class="col-sm-9">                      
+                            <select class="form-control" ng-show="vm.showDanceTypeSelect" id='multi-select-dance' multiple='multiple' name="my-select[]" ng-model="vm.newDance.dancetype" ng-options="x.name as x.name for x in vm.all_dancetypes">
+                            </select>
+                        </div>  
+                    </div>
+<!--Create dynamic dance couple input group and add button-->
+                <div ng-repeat="num in vm.myNumbers">
+                    <div class = "couple_group">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="control-label" for="icon">Couple {{num}}</label>
+                            </div>
+                            <div class="col-sm-4">                      
+                                <input type = "number" ng-keypress = "vm.addbutton()" class = "form-control" ng-model = "vm.number[num]" name="couple_number[]" placeholder = "Couple Number" ng-required="true" required/>
+                            </div>
+                            <div class="col-sm-5">                      
+                                <input type = "text" class = "form-control" ng-model = "vm.couple[num]" name="couple_name[]" placeholder = "Couple Name" ng-required="true" required/>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+<!--The end of Create dynamic dance couple input group and add button-->
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 pull-right-sm pull-right">
+                            <button type="submit" class="btn btn-block btn-primary">{{vm.addBtn_label}}</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</form>

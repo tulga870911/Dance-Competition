@@ -12,9 +12,9 @@
 
     var service = {
       root: root,
+      dances: root.child('dances'),
       users: root.child('users'),
-      emails: root.child('emails'),
-      textMessages: root.child('textMessages')
+      dancetypes: root.child('dancetypes')
     };
 
     return service;

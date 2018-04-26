@@ -13,10 +13,11 @@
       controller: 'AuthController',
       controllerAs: 'vm'
     });
+/*-------Login as judge---------*/ 
     $routeProvider.when('/login', {
       templateUrl: 'app/auth/login.html',
       controller: 'AuthController',
-      controllerAs: 'vm'
+      controllerAs: 'vm',
     });
   }
 

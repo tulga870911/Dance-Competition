@@ -1,0 +1,12 @@
+<form ng-submit="vm.addDancetype()" class="form-inline Dancetype-form" role="form">
+    <div class="form-group">
+        <input ng-model="vm.newDancetype.name" type="text" class="form-control" placeholder="Name" required>
+    </div>
+    <div class="form-group">
+        <input ng-model="vm.newDancetype.description" type="description" class="form-control" placeholder="Description" required>
+    </div>
+    <div class="form-group">
+        <input ng-model="vm.newDancetype.date" type="date" class="form-control" placeholder="Date" required>
+    </div>
+    <button type="submit" class="btn btn-primary pull-right-sm pull-right">Add a DanceType</button>
+</form>

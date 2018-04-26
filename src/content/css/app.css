@@ -13,25 +13,25 @@ body {
     font-size: 63px;
 }
 
-.party-form {
+.Dance-form {
     margin-bottom: 20px;
 }
 
 /* Auth styles */
 
-.form-signin {
+.form-login, .form-signin {
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
 }
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
+.form-login .form-signin-heading, .form-signin .form-signin-heading,
+.form-login .checkbox, .form-signin .checkbox {
     margin-bottom: 10px;
 }
-.form-signin .checkbox {
+.form-login .checkbox, .form-signin .checkbox  {
     font-weight: normal;
 }
-.form-signin .form-control {
+.form-login .form-control, .form-signin .form-control {
     position: relative;
     height: auto;
     -webkit-box-sizing: border-box;
@@ -40,19 +40,293 @@ body {
     padding: 10px;
     font-size: 16px;
 }
-.form-signin .form-control:focus {
+.form-login .form-control:focus, .form-signin .form-control:focus {
     z-index: 2;
 }
-.form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
+.form-login input[type='email'] {
     border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
-.form-signin input[type="password"] {
-    border-top-left-radius: 0;
+.form-login input[type='password'] {
+    margin-bottom: -1px;
     border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.form-signin input[type="text"] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="email"] {
+    border-radius: 0;
+}
+.form-signin input[name="password"] {
+    border-radius: 0;
+}
+.form-signin input[name="confirmpassword"] {
+    margin-bottom: -1px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
 }
 
 .form-signin input[type="submit"] {
     margin-top: 10px;
+}
+
+/*----------customize----------*/
+.active{
+    background:#4F5A61;
+    position:relative;
+    z-index: 1;
+    color:#fff;
+}
+.active span {
+    color:#fff;
+}
+.navbar-nav span{
+    transition:all 0.3s cubic-bezier(.16, .6, .04, 1.27);
+    -webkit-transform:scale(1);
+    -ms-transform:scale(1);
+    transform:scale(1);
+    display:block;
+}
+
+.Judge-form {
+    margin-bottom: 20px;
+}
+
+.Dancetype-form {
+    margin-bottom: 20px;
+}
+
+.form-login input[type="submit"] {
+    margin-top: 10px;
+}
+
+div.photo{
+    width:32px;
+    height:32px;
+    background-image: url('https://www.fanduel.com/images/member_defaultpic.gif');
+    background-size: 44px;
+    background-position: -6px -2px;
+    border-radius:4px;
+}
+
+.input{
+    width:30%;
+}
+
+#btnSubmit{
+    float:right;
+}
+
+.custom-header {
+    text-align: center;
+    padding: 3px;
+    background: #000;
+    color: #fff;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.row{
+    margin-bottom: 20px;
+}
+label[for]:after {
+    content: "*";
+    color: red;
+}
+.member-form-add-header {
+    width: 60%;
+    margin: 0px auto;
+}
+.ms-container {
+    width:100% !important;
+}
+.Live{
+    background-color:#00a65a;
+}
+.Upcoming{
+    background-color:#f39c12;
+}
+.Closed{
+    background-color:#f56954;
+}
+.badge {
+    min-width:75px;
+    margin-top: 10px;
+}
+
+table.marking_table,table.marking_table th,table.marking_table td {
+    border:2px solid white;
+    background-color:#cccccc; 
+    border-color:#dadada;
+    font-size:28px;
+    text-align: center;
+    margin:0px auto;
+}
+
+table.marking_table tr.header_footer{
+    background-color:#2393eb;
+    border-color:#ffffff;
+}
+.marking_table td{
+    transition-property:background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+
+}
+.marking_table td:hover {
+
+    background-color:#85c89c;
+}
+
+.marking_element_elected {
+
+    background-color:#81c997 !important;
+}
+
+.marking_element_selected, .marking_value_selected{
+
+    position: relative;
+    background-color:#56d2d4 !important;
+    opacity:0.6;
+}
+.special_mark{
+    font-size:14px;
+    font-weight:bold;
+    position: absolute;
+    right:5px;
+    bottom:1px;
+}
+
+.judge_marking{
+
+    width:130px;
+    height:108px;
+    text-align: center;
+    position:relative;
+    font-weight:bold;
+}
+
+.judge_marking div{
+
+    background-image:url('../../content/img/imgo.jpeg');
+    width:54px;
+    height:54px;
+    margin:0px auto;
+    background-repeat: no-repeat;
+    margin-bottom:5px;
+
+}
+
+.showResult_table{
+    margin-bottom:50px;
+    font-weight:bold;
+    margin-top:40px;
+}
+
+.showResult_table table{
+
+    margin:0px auto;
+}
+
+span.mark{
+    position:absolute;
+    right:2px;
+    font-size: 30px;
+    bottom:54px;
+    background-color: inherit;
+}
+
+/*---------Animation effect-------*/
+
+.slide.ng-enter {
+  transition:0.5s linear all;
+  transform:translateY(-100px);
+}
+.slide.ng-enter.ng-enter-active {
+  transform:translateY(0);
+}
+.slide .ng-hide{
+ animation:0.5s flipInX ease; 
+}
+#my_photo{
+    height:40px; border:2px solid #7d7d7d;
+    transition: all 0.5s cubic-bezier(.16, .6, .04, 1.27);
+}
+#my_photo:hover{
+    border:2px solid #00efef;
+}
+div#navbar ul li ul{
+
+    list-style: none;
+    margin: 0;  
+    padding: 0;    
+    visibility:hidden;
+    position: absolute;
+    z-index: 99999;
+    width:160px;
+    background:#f8f8f8;
+    box-shadow:0 2px 2px -1px rgba(0, 0, 0, 0.055);
+    opacity:0;
+    -webkit-transition:opacity 0.2s linear, visibility 0.2s linear; 
+    -moz-transition:opacity 0.2s linear, visibility 0.2s linear; 
+    -o-transition:opacity 0.2s linear, visibility 0.2s linear; 
+    transition:opacity 0.2s linear, visibility 0.2s linear; 
+
+}
+
+div#navbar ul li:hover > ul
+{
+    visibility:visible;
+    opacity:1;
+}
+
+div#navbar ul li ul li a {
+
+    -webkit-transition-property: background;
+    transition-property: background;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    background: #324053;
+    display: block;
+    color: #fff;
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+div#navbar ul li ul li a:hover {
+    
+    background: #121023;
+}
+
+div#navbar ul li ul li.logout {
+    padding:10px;
+    background: #324053;
+    -webkit-font-smoothing: antialiased;
+}
+div#navbar ul li ul li.logout a{
+    border-radius: 3px;
+    line-height: 40px;
+    padding: 0;
+    background: #43576f;
+    text-align: center;
+    text-transform: uppercase;
+    transition-duration: .2s;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor:pointer;
+}
+div#navbar ul li ul li.logout a:hover {
+
+    background-color:#ee2222;
 }

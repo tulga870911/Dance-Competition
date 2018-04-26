@@ -20,7 +20,6 @@
       transclude: true
     }
   }
-
   function AuthFormController() {
     var vm = this;
 

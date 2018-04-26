@@ -1,0 +1,36 @@
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th>No.</th>
+        <th>Photo</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tr ng-repeat="Judge in vm.judges">
+        <td>
+            <div><strong>{{$index +1}}</strong></div>
+        </td>
+        <td style = "text-align:center">
+            <img src = "{{Judge.image}}" style = "height:50px;"></div>
+        </td>
+        <td>
+            <div><strong>{{ Judge.name }}</strong></div>
+        </td>
+        <td>
+            <div>{{ Judge.email}}</div>
+        </td>
+        <td>
+            <div>{{ Judge.role}}</div>
+        </td>
+         <td>
+            <input ng-model="Judge.done" ng-change="vm.toggleDone(Judge)" type="checkbox">
+        </td>
+        <td>
+            <button ng-click="vm.removeJudge(Judge)" class="btn btn-danger">Remove</button>
+        </td>
+    </tr>
+</table>

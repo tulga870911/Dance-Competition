@@ -3,18 +3,24 @@
 
   angular
     .module('app', [
-      // Angular modules.
+
+      // Angular modules.      
       'ngRoute',
+      'ngAnimate',
 
-      // Third party modules.
+      // Third Dance modules.
       'firebase',
-
+      'ngStorage',
+      
       // Custom modules.
       'app.auth',
       'app.core',
       'app.landing',
       'app.layout',
-      'app.waitlist'
+      'app.dancelist',
+      'app.dancetypelist',
+      'app.markinglist',
+      'app.judgelist'
     ])
     .config(configFunction)
     .run(runFunction);

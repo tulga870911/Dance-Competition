@@ -2,13 +2,22 @@
 <html lang="en" ng-app="app">
 <head>
   <meta charset="utf-8">
-  <title>Wait and Eat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marking System for dance competition</title>
   <!--Bootstrap latest compiled and minified CSS-->
+  <link rel="shortcut icon" type="image/x-icon" href="content/img/favicon.ico"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <!--Optional theme-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> 
   <!--Custom CSS-->
   <link rel="stylesheet" href="content/css/app.css"/>
+  <link rel="stylesheet" href="content/css/ngDialog.css" type="text/css">
+  <link rel="stylesheet" href="content/css/ngDialog-theme-default.css" type="text/css">
+  <link rel="stylesheet" href="content/css/ngDialog-theme-plain.css" type="text/css">
+  <link rel="stylesheet" href="content/css/ngDialog-custom-width.css" type="text/css">
+  <link rel="stylesheet" href="content/js/multiselect/css/multi-select.css" type="text/css">
+  <link rel="stylesheet" href="content/css/bootstrap.fd.css">
+
 </head>
 <body>
 
@@ -18,13 +27,17 @@
   <!--Main content that changes based on route-->
   <div ng-view class="container"></div>
 
-  <!--Third-party JS-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!--Third-Dance JS-->
+    <!--Mobile Transaction-->
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="content/js/bootstrap.fd.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
-  <script src="https://code.angularjs.org/1.4.4/angular-route.js"></script>
-  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
   <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
 
   <!--main app module-->
   <script src="app/app.module.js"></script>
@@ -34,18 +47,40 @@
   <script src="app/auth/config.route.js"></script>
   <script src="app/auth/auth.controller.js"></script>
   <script src="app/auth/authForm.directive.js"></script>
+  <script src="app/auth/authFormRegister.directive.js"></script>
   <script src="app/auth/auth.service.js"></script>
 
   <!--layout module-->
   <script src="app/layout/layout.module.js"></script>
   <script src="app/layout/navbar.directive.js"></script>
 
-  <!--waitlist module-->
-  <script src="app/waitlist/waitlist.module.js"></script>
-  <script src="app/waitlist/config.route.js"></script>
-  <script src="app/waitlist/waitlist.controller.js"></script>
-  <script src="app/waitlist/directives/partyForm.directive.js"></script>
-  <script src="app/waitlist/directives/partyTable.directive.js"></script>
+  <!--dancelist module-->
+  <script src="app/dancelist/dancelist.module.js"></script>
+  <script src="app/dancelist/config.route.js"></script>
+  <script src="app/dancelist/dancelist.controller.js"></script>
+  <script src="app/dancelist/directives/DanceForm.directive.js"></script>
+  <script src="app/dancelist/directives/DanceTable.directive.js"></script>
+
+  <!--judgelist module-->
+  <script src="app/judgelist/judgelist.module.js"></script>
+  <script src="app/judgelist/config.route.js"></script>
+  <script src="app/judgelist/judgelist.controller.js"></script>
+  <script src="app/judgelist/directives/JudgeForm.directive.js"></script>
+  <script src="app/judgelist/directives/JudgeTable.directive.js"></script>
+
+  <!--dancetypelist module-->
+  <script src="app/dancetypelist/dancetypelist.module.js"></script>
+  <script src="app/dancetypelist/config.route.js"></script>
+  <script src="app/dancetypelist/dancetypelist.controller.js"></script>
+  <script src="app/dancetypelist/directives/DancetypeForm.directive.js"></script>
+  <script src="app/dancetypelist/directives/DancetypeTable.directive.js"></script>
+
+  <!--markinglist module-->
+  <script src="app/markinglist/markinglist.module.js"></script>
+  <script src="app/markinglist/config.route.js"></script>
+  <script src="app/markinglist/markinglist.controller.js"></script>
+  <script src="app/markinglist/directives/MarkingForm.directive.js"></script>
+  <script src="app/markinglist/directives/MarkingTable.directive.js"></script>
 
   <!--landing module-->
   <script src="app/landing/landing.module.js"></script>
@@ -55,8 +90,12 @@
   <script src="app/core/core.module.js"></script>
   <script src="app/core/constants.js"></script>
   <script src="app/core/firebaseData.service.js"></script>
-  <script src="app/core/party.service.js"></script>
-  <script src="app/core/textMessage.service.js"></script>
+  <script src="app/core/Dance.service.js"></script>
+  <script src="app/core/Judge.service.js"></script>
+  <script src="app/core/Dancetype.service.js"></script>
+
+  <!--Custom Dialog-->
+  <script src="content/js/multiselect/js/jquery.multi-select.js"></script>
 
 </body>
 </html>

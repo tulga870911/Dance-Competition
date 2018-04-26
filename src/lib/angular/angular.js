@@ -1322,7 +1322,7 @@ function setupModuleLoader(window) {
      * @description
      *
      * The `angular.module` is a global place for creating, registering and retrieving Angular modules.
-     * All modules (angular core or 3rd party) that should be available to an application must be
+     * All modules (angular core or 3rd Dance) that should be available to an application must be
      * registered using this mechanism.
      *
      * When passed two or more arguments, a new module is created.  If passed only one argument, an
@@ -1786,7 +1786,7 @@ function publishExternalAPI(angular){
  *
  * ### Events
  * - `$destroy` - AngularJS intercepts all jqLite/jQuery's DOM destruction apis and fires this event
- *    on all DOM nodes being removed.  This can be used to clean up any 3rd party bindings to the DOM
+ *    on all DOM nodes being removed.  This can be used to clean up any 3rd Dance bindings to the DOM
  *    element before it is removed.
  *
  * ### Methods
@@ -6447,7 +6447,7 @@ function $HttpProvider() {
      * ## JSON Vulnerability Protection
      *
      * A {@link http://haacked.com/archive/2008/11/20/anatomy-of-a-subtle-json-vulnerability.aspx
-     * JSON vulnerability} allows third party website to turn your JSON resource URL into
+     * JSON vulnerability} allows third Dance website to turn your JSON resource URL into
      * {@link http://en.wikipedia.org/wiki/JSONP JSONP} request under some conditions. To
      * counter this your server can prefix all JSON requests with following string `")]}',\n"`.
      * Angular will automatically strip the prefix before processing it as JSON.
@@ -9918,7 +9918,7 @@ function qFactory(nextTick, exceptionHandler) {
    * @name ng.$q#when
    * @methodOf ng.$q
    * @description
-   * Wraps an object that might be a value or a (3rd party) then-able promise into a $q promise.
+   * Wraps an object that might be a value or a (3rd Dance) then-able promise into a $q promise.
    * This is useful when you are dealing with an object that might or might not be a promise, or if
    * the promise comes from a source that can't be trusted.
    *
@@ -10752,7 +10752,7 @@ function $RootScopeProvider(){
        *
        * @description
        * `$apply()` is used to execute an expression in angular from outside of the angular framework.
-       * (For example from browser DOM events, setTimeout, XHR or third party libraries).
+       * (For example from browser DOM events, setTimeout, XHR or third Dance libraries).
        * Because we are calling into the angular framework we need to perform proper scope life cycle
        * of {@link ng.$exceptionHandler exception handling},
        * {@link ng.$rootScope.Scope#$digest executing watches}.

@@ -1,0 +1,33 @@
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Date</th>        
+        <th>Status</th>
+        <th>Actions</th>
+        <th>Result</th>
+    </tr>
+    </thead>
+    <tr ng-repeat="Dance in vm.dancies">
+        <td>
+            <div><strong>{{$index + 1}}</strong></div>
+        </td>
+        <td>
+            <div>{{ Dance.name}}</div>
+        </td>
+        <td>
+            <div>{{ Dance.date}}</div>
+        </td>
+         <td>
+            <span class = "badge {{Dance.state}}">{{Dance.state}}</span>
+        </td>
+        <td>
+            <button ng-click="vm.saveChange(Dance)" class="btn btn-success">Change</button>
+            <button ng-click="vm.removeDance(Dance)" class="btn btn-danger">Remove</button>
+        </td>
+        <td>
+            <button ng-click="vm.showResult(Dance)" class="btn btn-primary">Show the Result</button>
+        </td>
+    </tr>
+</table>

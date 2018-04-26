@@ -1,0 +1,18 @@
+<div ng-repeat = "dancetype in vm.dance.dancetype" id = "form{{$index}}" ng-hide = "vm.panel_flag[{{$index}}]" class = "slide">
+    <form method="post" name="myForm" style = "margin-bottom:5000px">
+        <table class = "marking_table" style = "width:80%;border-color:#fefefe">
+            <col width = "40%">
+            <col width = "40%">
+            <tr class = "header_footer">
+                <th colspan = "2" style = "background-color:#2393eb; color:white">{{dancetype}}</th>
+            </tr>
+            <tr ng-repeat = "dancer in vm.dance.dancers" class = "tr_dancers">
+                <td ng-class = 'couple' ng-click = "vm.coupleclick($event)">{{dancer.key}}</td>
+                <td ng-class = 'value' ng-click = "vm.valueclick($event,$index)">{{$index + 1}}</td>
+            </tr>
+            <tr class = "header_footer">
+                <td colspan = "2" style = "background-color:#2393eb; color:white"><div ng-disabled = "vm.marking_finish_flag" id = "validate" ng-click = "vm.save_marking($event, dancetype,$index)"><span style = "cursor:default">VALIDATE</span><div></td>
+            </tr>
+        </table>
+    </form>
+</div>

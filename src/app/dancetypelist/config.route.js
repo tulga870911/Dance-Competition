@@ -2,15 +2,15 @@
   'use strict';
 
   angular
-    .module('app.waitlist')
+    .module('app.dancetypelist')
     .config(configFunction);
 
   configFunction.$inject = ['$routeProvider'];
 
   function configFunction($routeProvider) {
-    $routeProvider.when('/waitlist', {
-      templateUrl: 'app/waitlist/waitlist.html',
-      controller: 'WaitListController',
+    $routeProvider.when('/dancetypelist', {
+      templateUrl: 'app/dancetypelist/dancetypelist.html',
+      controller: 'dancetypeListController',
       controllerAs: 'vm',
       resolve: {user: resolveUser}
     });
